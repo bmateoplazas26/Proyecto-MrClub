@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+    <title>CLUB ACERIAS - Panel Principal</title>
+
+    <style>
+        .icono-principal {font-size: 45px; color: aqua; }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <div class="header-mr de flex justify-content-between align-items-center">
+        <h3>CLUB ACERIAS - Panel Principal</h3>
+        <div class="text-end">
+            <small>Mateo Plazas </small>
+            <button class="btn btn-danger btn-sm mt-1"><i class="bi bi-box-arrow-right"></i>Cerrar Sesión</button>
+        </div>
+    </div>
+
+    <div class="container py-4">
+        <h5 class="mb-4 fw-bold">Modulos del Club de Asociados</h5>
+        <div id="tarjetasAdministrador" class="row g-4">
+            <div class="col-md-3">
+                <div class="card modulo-card shadow-sm p-3">
+                    <i class="bi bi-people icono-principal"></i>
+                    <h4 class="text-primary">Asociados</h4>
+                    <strong>Gestion de Asociados</strong>
+                    <p class="small text-muted mt-2">
+                        Administra la informacion de los asociados, incluyendo sus datos personales, historial de
+                        membresia y estado de cuenta.
+                    </p>
+                </div>
+            </div>
+
+             <div class="col-md-3">
+                <div class="card modulo-card shadow-sm p-3">
+                    <i class="bi bi-window-fullscreen icono-principal"></i>
+                    <h4 class="text-primary">Actividades</h4>
+                    <strong>Gestion de Actividades</strong>
+                    <p class="small text-muted mt-2">
+                        Administra la informacion de las actividades, incluyendo sus datos personales, historial de
+                        membresia y estado de cuenta.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card modulo-card shadow-sm p-3">
+                    <i class="bi bi-cash-coin icono-principal"></i>
+                    <h4 class="text-primary">Prestamos</h4>
+                    <strong>Gestion de Prestamos</strong>
+                    <p class="small text-muted mt-2">
+                        Administra la informacion de los prestamos, incluyendo sus datos personales, historial de
+                        membresia y estado de cuenta.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
