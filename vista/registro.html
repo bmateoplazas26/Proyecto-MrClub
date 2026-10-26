@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang = "es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mr Club</title>
+        <link rel="stylesheet" href="../accets/css/estilos.css">
+    </head>
+    <body>
+        <div>
+            <h2>Registro de Asociados - Acerias</h2>
+
+            <form id="formRegistro" action="" method="POST">
+                <div class="grupo-input">
+                    <label>Ingresar Documento:</label>
+                    <input id="documento" type="number" placeholder="ejemplo: 1052840957">
+                </div>
+                <div class="grupo-input">
+                    <label>Nombre: </label>
+                    <input type="text" id="nombre" required placeholder="Ingrese nombres completos">
+                </div>
+                 <div class="grupo-input">
+                    <label>Apellidos: </label>
+                    <input type="text" id="apellido" required placeholder="Ingrese Apellidos completos">
+                </div>
+                 <div class="grupo-input">
+                    <label>Fecha de nacimiento: </label>
+                    <input type="date" id="fechaNacimiento" required placeholder="ejemplo: 26/08/2008">
+                </div>
+                 <div class="grupo-input">
+                    <label>Ingresar direccion: </label>
+                    <input type="text" id="direccion" required placeholder="ejemplo: Calle 14 #12-23">
+                </div>
+                 <div class="grupo-input">
+                    <label>Ingresar telefono: </label>
+                    <input type="telefono" id="number" required placeholder="ejemplo: 3214440980">
+                </div>
+                 <div class="grupo-input">
+                    <label>Ingresar su Email: </label>
+                    <input type="text" id="Email" required placeholder="ejemplo: mateo@gmail.com">
+                </div>
+                <div class="grupo-input">
+                    <label>Ingresar su ciudad: </label>
+                    <select id ="ciudad" required>
+                        <option value = "sogamoso" > Sogamoso </option>
+                        <option value = "duitama" > Duitama </option>
+                        <option value = "nobsa" > Nobsa </option>
+                    </select>
+                </div>
+                 <div class="grupo-input">
+                    <label>Ingrese su genero: </label>
+                    <input type="radio" id name="genero" values="femenino">
+                    <label>femenino</label>
+                    <input type="radio" id name="genero" values="masculino">
+                    <label>masculino</label>
+                    <input type="radio" id name="genero" values="otro">
+                    <label>otro</label>
+                </div>
+
+                <div class="grupo-botones">
+                    <button type="submit">Guardar</button>
+                    <button type="reset">Limpiar formulario</button>
+                </div>
+
+            </form>
+        </div>
+    </body>
+</html>

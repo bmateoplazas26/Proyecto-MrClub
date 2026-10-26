@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Mr Club</title>
+    <style>
+        /* Estilos generales idénticos al tono morado de tu formulario */
+        body {
+            background-color: #6a2c91; /* Tono morado similar a tu interfaz */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #000;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 350px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-weight: bold;
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        button, input[type="reset"] {
+            flex: 1;
+            padding: 8px 0;
+            background-color: #e0e0e0;
+            border: 1px solid #999;
+            border-radius: 3px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover, input[type="reset"]:hover {
+            background-color: #d0d0d0;
+        }
+
+        .register-link {
+            margin-top: 20px;
+            font-size: 13px;
+        }
+
+        .register-link a {
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Iniciar Sesión - Acerías</h2>
+
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="documento">Ingresar Usuario:</label>
+                <input type="text" id="documento" name="documento" placeholder="ejemplo: 1052840957" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+            </div>
+
+            <div class="buttons">
+                <button type="submit">Ingresar</button>
+                <input type="reset" value="Limpiar">
+            </div>
+
+            <div class="register-link">
+                <p>¿No tienes una cuenta? <a href="registro.html">Regístrate aquí</a></p>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
