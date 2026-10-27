@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión - Mr Club</title>
     <style>
-        /* Estilos generales idénticos al tono morado de tu formulario */
+        
         body {
-            background-color: #6a2c91; /* Tono morado similar a tu interfaz */
+            background-color: #6a2c91; 
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
@@ -89,11 +89,12 @@
 
     <div class="login-container">
         <h2>Iniciar Sesión - Acerías</h2>
+       
 
-        <form action="#" method="POST">
+        <form id="formLogin" action="#" method="POST">
             <div class="form-group">
-                <label for="documento">Ingresar Usuario:</label>
-                <input type="text" id="documento" name="documento" placeholder="ejemplo: 1052840957" required>
+                <label for="Usuario">Ingresar Usuario:</label>
+                <input type="text" id="Usuario" name="Usuario" placeholder="ejemplo: 1052840957" required>
             </div>
 
             <div class="form-group">
@@ -113,4 +114,6 @@
     </div>
 
 </body>
+
+<script src="../controlador/login.js"></script>
 </html>

@@ -9,7 +9,29 @@
     <title>CLUB ACERIAS - Panel Principal</title>
 
     <style>
-        .icono-principal {font-size: 45px; color: aqua; }
+       .header-mr {
+        background-color: #0d6efd;
+        color: white;
+        padding: 20px 30px;
+       }
+       .modulo-card {
+        border-top: 4px solid #0d6efd;
+        border-radius: 10px;
+        transition:0.2s;
+        cursor: pointer;
+        height: 100%;
+       }
+       .modulo-card.asociado {
+        border-top-color: #198754;
+       }
+       .modulo-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+       }
+       .icono-principal {
+        font-size: 45px; 
+        color: aqua; 
+    }
     </style>
 </head>
 
@@ -18,8 +40,10 @@
     <div class="header-mr de flex justify-content-between align-items-center">
         <h3>CLUB ACERIAS - Panel Principal</h3>
         <div class="text-end">
-            <small>Mateo Plazas </small>
-            <button class="btn btn-danger btn-sm mt-1"><i class="bi bi-box-arrow-right"></i>Cerrar Sesión</button>
+            <small id="nombreUsuario"></small>
+            <button class="btn btn-danger btn-sm mt-1" onclick="cerrarSesion()">
+            <i class="bi bi-box-arrow-right">
+            </i>Cerrar Sesión</button>
         </div>
     </div>
 
@@ -61,8 +85,40 @@
                     </p>
                 </div>
             </div>
+
+             <div class="col-md-3">
+                <div class="card modulo-card shadow-sm p-3">
+                    <i class="bi bi-cash-coin icono-principal"></i>
+                    <h4 class="text-primary">Reportes</h4>
+                    <strong>Gestion de Reportes</strong>
+                    <p class="small text-muted mt-2">
+                        Administra la informacion de los reportes, incluyendo sus datos personales, historial de
+                        membresia y estado de cuenta.
+                    </p>
+                </div>
+            </div>
+
+            
+        </div>
+        <div id="tarjetasAsociado" class="row g-4 d-none">
+            <div class="col-md-3">
+                <div class="car modulo-card asociado shadow-sm p-3">
+                    <i class="bi bi-people icono-principal"></i>
+                    <h4 class="text-success mt-2">Mi Perfil</h4>
+                    <p class="smal text-muted">Ver mis datos y prestamos</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="car modulo-card asociado shadow-sm p-3">
+                    <i class="bi bi-credit-card icono-principal"></i>
+                    <h4 class="text-success mt-2">Mis Pagos</h4>
+                    <p class="smal text-muted">Ver mis abonos de mis prestamos</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
 
+<script src="../controlador/dashboard.js"></script>
 </html>
