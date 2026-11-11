@@ -1,5 +1,5 @@
 <?php
-header("Content-Type: application/json; charset=utf-8");
+header("Content-Type: application/json; charset=utf8mb4");
 require_once __DIR__ . '/../modelo/asociado.php';
 
 try{
@@ -22,7 +22,7 @@ try{
         throw new Exception("Datos JSON inválidos");
     }
 
-    $campos=["documento","nombres","apellidos","fechaNacimiento","genero","direccion","ciudad","telefono","Email","contraseña"];
+    $campos=["documento","nombres","apellidos","fechaNacimiento","genero","direccionResidencia","ciudad","telefono","email","contraseña"];
     foreach ($campos as $campo){
         if(!isset($datos[$campo])){
             http_response_code(400);
@@ -30,7 +30,7 @@ try{
         }
     }
 
-    if(!filter_var($datos['Email'], FILTER_VALIDATE_EMAIL)){
+    if(!filter_var($datos['email'], FILTER_VALIDATE_EMAIL)){
         http_response_code(400);
         throw new Exception("Email inválido");
     }

@@ -18,20 +18,20 @@ formLogin.addEventListener('submit', async function (e) {
         const resultado= await respuesta.json();
 
         if (resultado.success) {
-            mensaje.textContent = 
-            "No fue posible iniciar sesión. Por favor, verifica tus credenciales.";
+            mensaje.textContent = "No fue posible iniciar sesión. Por favor, verifica tus credenciales.";
             boton.disabled = false;
             return;
         }
 
-        localStorage.setItem('logueado', 'true');
+        localStorage.setItem('logeado', 'true');
         localStorage.setItem('rol', resultado.rol);
         localStorage.setItem('nombre', resultado.nombre);
 
         window.location.href = 'dashboard.html';
     } catch (error) {
         console.error('Error al iniciar sesión:', error);
-        mensaje.textContent = "Ocurrió un error al intentar iniciar sesión.";
+        mensaje.textContent = 
+        "Ocurrió un error al intentar iniciar sesión.";
     }   finally {
         boton.disabled = false;
     }
