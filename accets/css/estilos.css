@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: rebeccapurple;
+    background-color: #b9e0ff;
     display: flex;
     justify-content: center; /*horizontal*/
     align-items: center;
