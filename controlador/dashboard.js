@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded',  () => {
        
 });
 
-function cerrarSesion(){
+async function cerrarSesion(){
     try {
         const respuesta = await fetch("../modelo/cerrarSesion.php", {method:'POST'});
 

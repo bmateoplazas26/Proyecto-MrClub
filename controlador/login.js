@@ -1,4 +1,4 @@
-const formLogin = document.getElementById('formLogin') 
+const formLogin = document.getElementById('formLogin');
 formLogin.addEventListener('submit', async function (e) {
     e.preventDefault();
 
@@ -11,11 +11,10 @@ formLogin.addEventListener('submit', async function (e) {
         const respuesta = await fetch(formLogin.action, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(Object.fromEntries(new FormData(formLogin).entries()),
-        ),
+            body: JSON.stringify(Object.fromEntries(new FormData(formLogin).entries())),
         });
 
-        const resultado= await respuesta.json();
+        const resultado = await respuesta.json();
 
         if (resultado.success) {
             mensaje.textContent = "No fue posible iniciar sesión. Por favor, verifica tus credenciales.";
@@ -23,15 +22,13 @@ formLogin.addEventListener('submit', async function (e) {
             return;
         }
 
-        localStorage.setItem('logeado', 'true');
+        localStorage.setItem('logueado', 'true');
         localStorage.setItem('rol', resultado.rol);
         localStorage.setItem('nombre', resultado.nombre);
-
         window.location.href = 'dashboard.html';
     } catch (error) {
         console.error('Error al iniciar sesión:', error);
-        mensaje.textContent = 
-        "Ocurrió un error al intentar iniciar sesión.";
+        mensaje.textContent = "Ocurrió un error al intentar iniciar sesión.";
     }   finally {
         boton.disabled = false;
     }

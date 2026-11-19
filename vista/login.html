@@ -91,15 +91,15 @@
         <h2>Iniciar Sesión - Acerías</h2>
        
 
-        <form id="formLogin" action="../modelo/login.php" method="POST">
+        <form id="formLogin" action="../modelo/iniciarSesion.php" method="POST">
             <div class="form-group">
-                <label for="Usuario">Ingresar Usuario:</label>
-                <input type="text" id="Usuario" name="Usuario" placeholder="ejemplo: 1052840957" required>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo: mateo@gmail.com" autocomplete="username" required>
             </div>
 
             <div class="form-group">
-                <label for="password">contraseña:</label>
-                <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" id="contraseña" name="contraseña" placeholder="Ingrese su contraseña" autocomplete="current-password" required>
             </div>
 
             <div class="buttons">
