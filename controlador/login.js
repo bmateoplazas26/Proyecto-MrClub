@@ -16,7 +16,7 @@ formLogin.addEventListener('submit', async function (e) {
 
         const resultado = await respuesta.json();
 
-        if (resultado.success) {
+        if (!resultado.success) {
             mensaje.textContent = "No fue posible iniciar sesión. Por favor, verifica tus credenciales.";
             boton.disabled = false;
             return;

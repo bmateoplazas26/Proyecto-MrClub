@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+    <title>Proyecto ADSO - Préstamos</title>
+    <style>
+        .header-mr {
+            background-color: #0d6efd;
+            color: white;
+            padding: 20px 30px;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <header class="header-mr d-flex justify-content-between align-items-center gap-3">
+        <h1 class="h3 mb-0">Gestión de Préstamos</h1>
+        <a class="btn btn-outline-light" href="dashboard.html">
+            <i class="bi bi-arrow-left"></i>
+            Volver al panel
+        </a>
+    </header>
+
+    <main class="container py-4">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-3">
+            <p class="mb-0 text-muted">
+                Consulta los préstamos registrados y su información detallada.
+            </p>
+            <div>
+                <a id="nuevoPrestamo" href="#" class="btn btn-primary d-none text-decoration-none" data-bs-toggle="modal" data-bs-target="#modalPrestamo">
+                    <i class="bi bi-plus-lg"></i>
+                    Nuevo Préstamo
+                </a>
+            </div>
+        </div>
+        <div class="card shadow-sm">
+            <div class="table-responsive">
+                <table class="table table-striped table-hover align-middle mb-0">
+                    <thead class="table-primary">
+                        <tr>
+                            <th scope="col">Asociado</th>
+                            <th scope="col">Valor Préstamo</th>
+                            <th scope="col">Tasa Interés (%)</th>
+                            <th scope="col">Cuotas</th>
+                            <th scope="col">Fecha</th>
+                            <th id="encabezadoAcciones" class="d-none" scope="col">
+                                Acciones
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaPrestamos">
+                        <tr>
+                            <td colspan="6" class="text-center py-4">
+                                Cargando préstamos...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="toastPrestamo" class="toast align-items-center text-bg-primary border-0" role="status"
+            aria-live="polite" aria-atomic="true">
+            <div class="d-flex">
+                <div id="mensajePrestamos" class="toast-body"></div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Cerrar"></button>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalPrestamo" tabindex="-1" aria-labelledby="tituloModalPrestamo" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form id="formPrestamo">
+                    <div class="modal-header bg-primary text-white">
+                        <h2 class="modal-title fs-5" id="tituloModalPrestamo">
+                            Nuevo Préstamo
+                        </h2>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" id="idPrestamo" value="" />
+                        <div class="mb-3">
+                            <label for="idAsociado" class="form-label">Asociado</label>
+                            <select class="form-select" id="idAsociado" required>
+                                <option value="">Seleccione un asociado...</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="valorPrestamo" class="form-label">Valor del Préstamo</label>
+                            <input type="number" class="form-control" id="valorPrestamo" min="0" step="0.01" required placeholder="Ej: 5000000" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="tasaInteres" class="form-label">Tasa de Interés (%)</label>
+                            <input type="number" class="form-control" id="tasaInteres" min="0" step="0.01" required placeholder="Ej: 1.5" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="numeroCuotas" class="form-label">Número de Cuotas</label>
+                            <input type="number" class="form-control" id="numeroCuotas" min="1" required placeholder="Ej: 12" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="fechaPrestamo" class="form-label">Fecha del Préstamo</label>
+                            <input type="date" class="form-control" id="fechaPrestamo" required />
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button id="guardarPrestamo" type="submit" class="btn btn-primary">Guardar Préstamo</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../Controladores/prestamos.js"></script>
+</body>
+
+</html>

@@ -9,41 +9,46 @@
     <title>CLUB ACERIAS - Panel Principal</title>
 
     <style>
-       .header-mr {
-        background-color: #0d6efd;
-        color: white;
-        padding: 20px 30px;
-       }
-       .modulo-card {
-        border-top: 4px solid #0d6efd;
-        border-radius: 10px;
-        transition:0.2s;
-        cursor: pointer;
-        height: 100%;
-       }
-       .modulo-card.asociado {
-        border-top-color: #198754;
-       }
-       .modulo-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
-       }
-       .icono-principal {
-        font-size: 45px; 
-        color: aqua; 
-    }
+        .header-mr {
+            background-color: #0d6efd;
+            color: white;
+            padding: 20px 30px;
+        }
+
+        .modulo-card {
+            border-top: 4px solid #0d6efd;
+            border-radius: 10px;
+            transition: 0.2s;
+            cursor: pointer;
+            height: 100%;
+            text-decoration: none;
+        }
+
+        .modulo-card.asociado {
+            border-top-color: #198754;
+        }
+
+        .modulo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+        }
+
+        .icono-principal {
+            font-size: 45px;
+            color: aqua;
+        }
     </style>
 </head>
 
 <body class="bg-light">
 
-    <div class="header-mr de flex justify-content-between align-items-center">
+    <div class="header-mr d-flex justify-content-between align-items-center">
         <h3>CLUB ACERIAS - Panel Principal</h3>
         <div class="text-end">
             <small id="nombreUsuario"></small>
             <button class="btn btn-danger btn-sm mt-1" onclick="cerrarSesion()">
-            <i class="bi bi-box-arrow-right">
-            </i>Cerrar Sesión</button>
+                <i class="bi bi-box-arrow-right"></i> Cerrar Sesión
+            </button>
         </div>
     </div>
 
@@ -51,7 +56,7 @@
         <h5 class="mb-4 fw-bold">Modulos del Club de Asociados</h5>
         <div id="tarjetasAdministrador" class="row g-4">
             <div class="col-md-3">
-                <div class="card modulo-card shadow-sm p-3">
+                <a href="asociados.html" class="card modulo-card shadow-sm p-3">
                     <i class="bi bi-people icono-principal"></i>
                     <h4 class="text-primary">Asociados</h4>
                     <strong>Gestion de Asociados</strong>
@@ -59,11 +64,11 @@
                         Administra la informacion de los asociados, incluyendo sus datos personales, historial de
                         membresia y estado de cuenta.
                     </p>
-                </div>
+                </a>
             </div>
 
-             <div class="col-md-3">
-                <div class="card modulo-card shadow-sm p-3">
+            <div class="col-md-3">
+                <a href="registrarActividad.html" class="card modulo-card shadow-sm p-3">
                     <i class="bi bi-window-fullscreen icono-principal"></i>
                     <h4 class="text-primary">Actividades</h4>
                     <strong>Gestion de Actividades</strong>
@@ -71,11 +76,11 @@
                         Administra la informacion de las actividades, incluyendo sus datos personales, historial de
                         membresia y estado de cuenta.
                     </p>
-                </div>
+                </a>
             </div>
 
             <div class="col-md-3">
-                <div class="card modulo-card shadow-sm p-3">
+                <a href="prestamo.html" class="card modulo-card shadow-sm p-3">
                     <i class="bi bi-cash-coin icono-principal"></i>
                     <h4 class="text-primary">Prestamos</h4>
                     <strong>Gestion de Prestamos</strong>
@@ -83,42 +88,42 @@
                         Administra la informacion de los prestamos, incluyendo sus datos personales, historial de
                         membresia y estado de cuenta.
                     </p>
-                </div>
+                </a>
             </div>
 
-             <div class="col-md-3">
-                <div class="card modulo-card shadow-sm p-3">
+            <div class="col-md-3">
+                <a href="pagos.html" class="card modulo-card shadow-sm p-3">
                     <i class="bi bi-cash-coin icono-principal"></i>
-                    <h4 class="text-primary">Reportes</h4>
-                    <strong>Gestion de Reportes</strong>
+                    <h4 class="text-primary">Pagos</h4>
+                    <strong>Gestion de Pagos</strong>
                     <p class="small text-muted mt-2">
-                        Administra la informacion de los reportes, incluyendo sus datos personales, historial de
+                        Administra la informacion de los pagos, incluyendo sus datos personales, historial de
                         membresia y estado de cuenta.
                     </p>
-                </div>
+                </a>
             </div>
-
-            
         </div>
+
         <div id="tarjetasAsociado" class="row g-4 d-none">
             <div class="col-md-3">
-                <div class="car modulo-card asociado shadow-sm p-3">
+                <div class="card modulo-card asociado shadow-sm p-3">
                     <i class="bi bi-people icono-principal"></i>
                     <h4 class="text-success mt-2">Mi Perfil</h4>
-                    <p class="smal text-muted">Ver mis datos y prestamos</p>
+                    <p class="small text-muted">Ver mis datos y prestamos</p>
                 </div>
             </div>
 
             <div class="col-md-3">
-                <div class="car modulo-card asociado shadow-sm p-3">
+                <div class="card modulo-card asociado shadow-sm p-3">
                     <i class="bi bi-credit-card icono-principal"></i>
                     <h4 class="text-success mt-2">Mis Pagos</h4>
-                    <p class="smal text-muted">Ver mis abonos de mis prestamos</p>
+                    <p class="small text-muted">Ver mis abonos de mis prestamos</p>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="../controlador/dashboard.js"></script>
 </body>
 
-<script src="../controlador/dashboard.js"></script>
 </html>
